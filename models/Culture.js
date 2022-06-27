@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const CultureSchema = new mongoose.Schema(
     {
-        culturename:{type:String, required:true},
+        name:{type:String, required:true},
         year:{type:Number, required:true},
         type:{type:String},
         reg_num:{type:Number},
