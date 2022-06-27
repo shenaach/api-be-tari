@@ -1,14 +1,12 @@
 const express = require("express");
 const app = express();
+var cors = require('cors');
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const cultureRoute = require("./routes/culture");
 const provinceRoute = require("./routes/province");
-
-var cors = require('cors');
-app.use(cors());
 
 dotenv.config();
 
@@ -20,8 +18,8 @@ mongoose
         console.log(err);
 });
 
+app.use(cors());
 app.use(express.json());
-//rest api
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/cultures", cultureRoute);
