@@ -7,9 +7,9 @@ const CultureSchema = new mongoose.Schema(
         type:{type:String},
         reg_num:{type:Number},
         desc:{type:String},
-        img:{type:String},
-        video:{type:[String]},
-        imgs:{type:[String]},
+        img: { type: String },
+        imgs: { type: [String] },
+        video: { type: [String] },
         province: { type: mongoose.Types.ObjectId, ref: "Province" },
     },
         {timestamps: true}
